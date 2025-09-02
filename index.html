@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Promotion System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Promo<span>System</span></h2>
+                <p>Integrated Marketing Platform</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li class="active" data-section="dashboard"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li data-section="goals"><a href="#"><i class="fas fa-bullseye"></i> Goals & Audience</a></li>
+                    <li data-section="website"><a href="#"><i class="fas fa-globe"></i> Website/CTAs</a></li>
+                    <li data-section="content"><a href="#"><i class="fas fa-file-alt"></i> Content</a></li>
+                    <li data-section="social"><a href="#"><i class="fas fa-hashtag"></i> Social Media</a></li>
+                    <li data-section="ads"><a href="#"><i class="fas fa-ad"></i> Paid Ads</a></li>
+                    <li data-section="email"><a href="#"><i class="fas fa-envelope"></i> Email Marketing</a></li>
+                    <li data-section="analytics"><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                    <li data-section="promotions"><a href="#"><i class="fas fa-gift"></i> Promotions</a></li>
+                    <li data-section="seo"><a href="#"><i class="fas fa-search"></i> SEO</a></li>
+                    <li data-section="engagement"><a href="#"><i class="fas fa-comments"></i> Engagement</a></li>
+                    <li data-section="compliance"><a href="#"><i class="fas fa-balance-scale"></i> Compliance</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Marketing Campaign Dashboard</h1>
+                <div class="actions">
+                    <button id="launchBtn" class="btn btn-primary"><i class="fas fa-rocket"></i> Launch Campaign</button>
+                </div>
+            </header>
+            
+            <!-- Dashboard Overview -->
+            <section id="dashboard-section" class="section-content active">
+                <div class="stats">
+                    <div class="stat-card stat-1">
+                        <div class="stat-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>24.8K</h3>
+                            <p>Impressions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card stat-2">
+                        <div class="stat-icon">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>1.2K</h3>
+                            <p>CTR</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card stat-3">
+                        <div class="stat-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>186</h3>
+                            <p>Conversions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card stat-4">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>$3,245</h3>
+                            <p>Revenue</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <!-- Goals & Audience Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-bullseye"></i> Goals & Target Audience</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="progress-container campaign-progress">
+                                <div class="progress-title">
+                                    <span>Campaign Progress</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="65"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Primary Objective</label>
+                                <select class="form-control" id="campaignObjective">
+                                    <option value="awareness">Brand Awareness</option>
+                                    <option value="sales" selected>Sales Conversion</option>
+                                    <option value="leads">Lead Generation</option>
+                                    <option value="traffic">Traffic Growth</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Target Audience</label>
+                                <textarea class="form-control" id="targetAudience">Age: 25-45 | Location: US, UK, CA | Interests: Technology, Business, Finance | Behavior: Online shoppers, Social media users</textarea>
+                            </div>
+                            
+                            <button class="btn btn-primary" id="updateStrategyBtn">Update Strategy</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Content & Social Media Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-file-alt"></i> Content & Social Media</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="progress-container seo-progress">
+                                <div class="progress-title">
+                                    <span>SEO Optimization</span>
+                                    <span>45%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="45"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Content Strategy</label>
+                                <select class="form-control" id="contentStrategy">
+                                    <option value="blog">Blog Posts + Social</option>
+                                    <option value="video" selected>Video Content + Ads</option>
+                                    <option value="infographics">Infographics + Email</option>
+                                    <option value="mixed">Mixed Content Strategy</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Social Platforms</label>
+                                <div class="social-icons">
+                                    <div class="social-icon facebook" data-platform="facebook"><i class="fab fa-facebook-f"></i></div>
+                                    <div class="social-icon instagram" data-platform="instagram"><i class="fab fa-instagram"></i></div>
+                                    <div class="social-icon twitter" data-platform="twitter"><i class="fab fa-twitter"></i></div>
+                                    <div class="social-icon linkedin" data-platform="linkedin"><i class="fab fa-linkedin-in"></i></div>
+                                    <div class="social-icon tiktok" data-platform="tiktok"><i class="fab fa-tiktok"></i></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Next Post Schedule</label>
+                                <input type="datetime-local" class="form-control" id="postSchedule" value="2023-08-15T14:30">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Paid Advertising Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-ad"></i> Paid Advertising</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="platform-grid">
+                                <div class="platform-card google-ads" data-platform="google">
+                                    <div class="platform-icon">
+                                        <i class="fab fa-google"></i>
+                                    </div>
+                                    <h4>Google Ads</h4>
+                                    <p>$<span class="platform-budget">850</span></p>
+                                </div>
+                                <div class="platform-card facebook-ads" data-platform="facebook">
+                                    <div class="platform-icon">
+                                        <i class="fab fa-facebook"></i>
+                                    </div>
+                                    <h4>Facebook Ads</h4>
+                                    <p>$<span class="platform-budget">1200</span></p>
+                                </div>
+                                <div class="platform-card linkedin-ads" data-platform="linkedin">
+                                    <div class="platform-icon">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <h4>LinkedIn Ads</h4>
+                                    <p>$<span class="platform-budget">600</span></p>
+                                </div>
+                                <div class="platform-card tiktok-ads" data-platform="tiktok">
+                                    <div class="platform-icon">
+                                        <i class="fab fa-tiktok"></i>
+                                    </div>
+                                    <h4>TikTok Ads</h4>
+                                    <p>$<span class="platform-budget">400</span></p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Total Ad Budget</label>
+                                <input type="range" min="0" max="10000" value="3050" class="form-control" id="budgetSlider">
+                                <div class="progress-title">
+                                    <span>Budget Allocation</span>
+                                    <span id="budgetValue">$3,050</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Analytics & Compliance Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-line"></i> Analytics & Compliance</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="progress-container engagement-progress">
+                                <div class="progress-title">
+                                    <span>Engagement Rate</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="75"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Tracking Implemented</label>
+                                <div class="compliance-check">
+                                    <input type="checkbox" id="ga" checked>
+                                    <label for="ga">Google Analytics</label>
+                                </div>
+                                <div class="compliance-check">
+                                    <input type="checkbox" id="pixel" checked>
+                                    <label for="pixel">Facebook Pixel</label>
+                                </div>
+                                <div class="compliance-check">
+                                    <input type="checkbox" id="gtm">
+                                    <label for="gtm">Google Tag Manager</label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Compliance Status</label>
+                                <select class="form-control" id="complianceStatus">
+                                    <option value="gdpr">GDPR Compliant</option>
+                                    <option value="ccpa" selected>CCPA Compliant</option>
+                                    <option value="review">Needs Review</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Promotional Offer</label>
+                                <input type="text" class="form-control" id="promoOffer" value="Summer Sale: 20% Off All Products">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Section -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-mouse-pointer"></i> Call to Action (CTA)</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Primary CTA</label>
+                            <select class="form-control" id="primaryCta">
+                                <option value="buy">Buy Now</option>
+                                <option value="signup" selected>Sign Up</option>
+                                <option value="discount">Get Discount</option>
+                                <option value="learn">Learn More</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Landing Page URL</label>
+                            <input type="url" class="form-control" id="landingPageUrl" value="https://yourwebsite.com/summer-sale">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>UTM Parameters</label>
+                            <input type="text" class="form-control" id="utmParams" value="utm_source=social&utm_medium=instagram&utm_campaign=summer_sale">
+                        </div>
+                        
+                        <button id="activateBtn" class="btn btn-primary btn-block"><i class="fas fa-check-circle"></i> Activate Campaign</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Other Sections (initially hidden) -->
+            <section id="goals-section" class="section-content">
+                <h2>Goals & Audience Management</h2>
+                <!-- Content would be loaded here -->
+            </section>
+            
+            <section id="website-section" class="section-content">
+                <h2>Website & Landing Pages</h2>
+                <!-- Content would be loaded here -->
+            </section>
+            
+            <!-- Additional sections for other menu items -->
+            
+        </main>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+    
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
